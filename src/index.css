@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 273 68% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 89% 52%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 273 68% 59%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 273 68% 59%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 273 68% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 273 68% 59%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 273 68% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-quanttun-purple text-white hover:bg-quanttun-darkPurple transition-colors duration-300 rounded-lg px-6 py-2 font-medium shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-quanttun-lightBlue text-white hover:bg-blue-500 transition-colors duration-300 rounded-lg px-6 py-2 font-medium shadow-md;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-quanttun-purple text-quanttun-purple hover:bg-quanttun-purple hover:text-white transition-colors duration-300 rounded-lg px-6 py-2 font-medium;
+  }
+
+  .card-gradient {
+    @apply bg-gradient-to-br from-white to-quanttun-grayBg rounded-xl shadow-md;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-gray-800 mb-6;
+  }
+
+  .section-container {
+    @apply py-16 px-4 md:px-10 max-w-7xl mx-auto;
+  }
+}
